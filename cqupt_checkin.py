@@ -599,6 +599,7 @@ def main():
 
 # WxPusher推送,文档: https://wxpusher.zjiecode.com/docs/#/?id=%e5%8f%91%e9%80%81%e6%b6%88%e6%81%af-1
 def wx_pusher(title, content):
+    print("wx")
     if wx_pusher_token == "":
         print("未配置wx_pusher_token,跳过推送")
         return
