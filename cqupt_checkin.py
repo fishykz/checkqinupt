@@ -696,6 +696,7 @@ def send_notification(title, content):
 
 try:
     send_notification("test", "success")
+    main()
 except Exception as e:
     if str(e) == "今日已打卡,不再打卡,脚本退出":
         send_notification("今日已打卡", "今日已打卡,不再打卡,脚本退出")
