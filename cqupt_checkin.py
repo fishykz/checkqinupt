@@ -51,7 +51,7 @@ telegram_bot_chat_id = ""  # telegram_bot推送给的用户id,必填
 
 '''  ##############################以下脚本运行代码，不动勿动##############################  '''
 '''读取环境变量'''
-
+print(os.environ)
 if "USERNAME" in os.environ:
     USERNAME = os.environ["USERNAME"]
 if "PASSWORD" in os.environ:
