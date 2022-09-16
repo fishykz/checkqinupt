@@ -76,8 +76,10 @@ if "TELEGRAMBOTCHATID" in os.environ:
     telegram_bot_chat_id = os.environ["TELEGRAMBOTCHATID"]
 if "WXPUSHERTOKEN" in os.environ:
     wx_pusher_token = os.environ["WXPUSHERTOKEN"]
+    print(wx_pusher_token)
 if "WXPUSHERUIDS" in os.environ:
     wx_pusher_uids = os.environ["WXPUSHERUIDS"].split(",")
+    print(wx_pusher_uids)
 if "WXPUSHERTOPICIDS" in os.environ:
     wx_pusher_topic_ids = os.environ["WXPUSHERTOPICIDS"].split(",")
 
