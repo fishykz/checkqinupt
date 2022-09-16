@@ -610,8 +610,6 @@ def wx_pusher(title, content):
         "summary": title,
     }
 
-    if wx_pusher_topic_ids.length > 0:
-        data["topicIds"] = wx_pusher_topic_ids
 
     if wx_pusher_uids.length > 0:
         data["uids"] = wx_pusher_uids
