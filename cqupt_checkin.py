@@ -611,7 +611,7 @@ def wx_pusher(title, content):
     }
 
 
-    if wx_pusher_uids.length > 0:
+    if wx_pusher_uids!=[]:
         data["uids"] = wx_pusher_uids
 
     try:
