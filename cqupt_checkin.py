@@ -695,7 +695,6 @@ def send_notification(title, content):
 '''-----------------------------主执行逻辑----------------------------------'''
 
 try:
-    send_notification("test", "success")
     main()
 except Exception as e:
     if str(e) == "今日已打卡,不再打卡,脚本退出":
