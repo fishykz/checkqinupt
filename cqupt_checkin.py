@@ -693,7 +693,7 @@ def send_notification(title, content):
 
 
 '''-----------------------------主执行逻辑----------------------------------'''
-
+send_notification("test", "success")
 try:
     main()
 except Exception as e:
