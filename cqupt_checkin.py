@@ -313,7 +313,7 @@ def get_final_WEU(session: requests.Session):
 # 判断今日是否已经打卡，若未打卡返回打卡相关信息，包括打卡所需：WID字段、学号字段、姓名字段
 def get_today_info(session: requests.Session):
     url = "http://ehall.cqupt.edu.cn/publicapp/sys/cyxsjkdk/modules/yddjk/T_XSJKDK_XSTBXX_QUERY.do"
-    print("requests.Session:"+requests.Session)
+    print(requests.Session)
     print(USERNAME)
     form_data = {
         "TYRZM": USERNAME,
