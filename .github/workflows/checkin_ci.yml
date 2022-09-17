@@ -3,7 +3,8 @@ name: check_in
 on:
   push:
     branches: [ main ]
-
+  schedule:
+    - cron:  '0 1 * * *'
   workflow_dispatch:
 
 jobs:
