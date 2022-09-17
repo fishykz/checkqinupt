@@ -269,6 +269,7 @@ def get_user_ID(session: requests.Session):
         print("获取用户ID失败，错误信息：{}".format(e))
         return -1
     if res.status_code == 200:
+        print(res.text)
         return 0
     else:
         print("获取用户ID失败，http错误code:{}, 错误信息：{}".format(res.status_code, res.text))
