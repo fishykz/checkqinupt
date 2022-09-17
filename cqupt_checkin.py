@@ -51,7 +51,7 @@ telegram_bot_chat_id = ""  # telegram_bot推送给的用户id,必填
 
 '''  ##############################以下脚本运行代码，不动勿动##############################  '''
 '''读取环境变量'''
-print(os.environ)
+
 if "USERNAME" in os.environ:
     USERNAME = os.environ["USERNAME"]
 if "PASSWORD" in os.environ:
@@ -76,10 +76,8 @@ if "TELEGRAMBOTCHATID" in os.environ:
     telegram_bot_chat_id = os.environ["TELEGRAMBOTCHATID"]
 if "WXPUSHERTOKEN" in os.environ:
     wx_pusher_token = os.environ["WXPUSHERTOKEN"]
-    print(wx_pusher_token)
 if "WXPUSHERUIDS" in os.environ:
     wx_pusher_uids = os.environ["WXPUSHERUIDS"].split(",")
-    print(wx_pusher_uids)
 if "WXPUSHERTOPICIDS" in os.environ:
     wx_pusher_topic_ids = os.environ["WXPUSHERTOPICIDS"].split(",")
 
@@ -599,7 +597,6 @@ def main():
 
 # WxPusher推送,文档: https://wxpusher.zjiecode.com/docs/#/?id=%e5%8f%91%e9%80%81%e6%b6%88%e6%81%af-1
 def wx_pusher(title, content):
-    print("wx")
     if wx_pusher_token == "":
         print("未配置wx_pusher_token,跳过推送")
         return
@@ -610,8 +607,10 @@ def wx_pusher(title, content):
         "summary": title,
     }
 
+    if wx_pusher_topic_ids.length !=[]:
+        data["topicIds"] = wx_pusher_topic_ids
 
-    if wx_pusher_uids!=[]:
+    if wx_pusher_uids.length !=[]:
         data["uids"] = wx_pusher_uids
 
     try:
@@ -696,7 +695,7 @@ def send_notification(title, content):
 '''-----------------------------主执行逻辑----------------------------------'''
 
 try:
-        send_notification("test", "success")
+    main()
 except Exception as e:
     if str(e) == "今日已打卡,不再打卡,脚本退出":
         send_notification("今日已打卡", "今日已打卡,不再打卡,脚本退出")
