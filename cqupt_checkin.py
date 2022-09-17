@@ -326,6 +326,7 @@ def get_today_info(session: requests.Session):
     res_json = res.json()
     try:
         today_data = res_json["datas"]["T_XSJKDK_XSTBXX_QUERY"]["rows"][0]
+        print(res_json)
     except Exception as e:
         print("解析今日打卡信息的返回json失败，错误信息：{}".format(e))
         return 2, ""
