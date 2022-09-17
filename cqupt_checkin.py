@@ -286,6 +286,7 @@ def get_APP_info(session: requests.Session):
         print("获取appInfo失败，错误信息：{}".format(e))
         return -1
     if res.status_code == 200:
+        print("appinfo:"+res.text)
         return 0
     else:
         print("获取appInfo失败，http错误code:{}, 错误信息：{}".format(res.status_code, res.text))
@@ -302,6 +303,7 @@ def get_final_WEU(session: requests.Session):
         print("获取final_WEU失败，错误信息：{}".format(e))
         return -1
     if res.status_code == 200:
+        print("final_WEU:"+res.text)
         return 0
     else:
         print("获取final_WEU失败，http错误code:{}, 错误信息：{}".format(res.status_code, res.text))
